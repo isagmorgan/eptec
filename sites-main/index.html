@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTEC - Centro Educacional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+
+<style>
+    input[type=checkbox]{
+    display: none;
+   } 
+
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   .dropdown {
+    left: 50%;
+    top: 10px;
+    transform: translateX(-20%);
+   }
+
+   iframe{
+    display: none;
+   }
+
+   .formulario{
+        width: 80%;
+        height: 120%;
+        margin-left: 20px;
+    }
+
+  
+   }
+
+    @media screen and (max-width: 426px) {
+        .detalhes h2{
+            font-size: 10px;
+        }
+
+        .slider{
+            height: 550px;
+        }
+        
+        .slide{
+            flex-wrap: wrap;
+        }
+
+        .slide-content {
+            width: 100%;
+        }
+
+
+        .section-title p{
+            font-size: 10px;
+        }
+    
+        .logos img{
+            width: 110px;
+        }
+
+        .banner{
+            height: 40vh;
+        }
+
+        .button-container .acd,
+        .button-container .adm{
+            width: 5rem;
+            font-size: 10px;
+        }
+    
+        .footer-content{
+            grid-template-columns: repeat(1,1fr);
+            padding: 3rem 2rem;
+            gap: 30px;
+        }
+
+        .topbar li {
+            font-size: 10px;
+        }
+    }
+		
+
+    @media screen and (max-width: 1024px) {
+        body{
+            overflow-x: hidden;
+        }
+
+        main .item{
+            margin-top: -15px;
+        }
+
+    }
+    
+    @keyframes swap-out {
+  0% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translatex(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translatex(100%);
+  }
+}
+</style>
+<body>
+    <header id="header">
+        <div class="topbar">
+            <li style="color:#ffffff;"> <i class="fas fa-envelope"></i> atendimento@eptec.com.br</li>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/eptec.centroeducacional/?locale=pt_BR"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/eptec/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="./img/logoEptec.png" alt="img" style="width: 60px;"></a>
+            </div>
+            <ul class="nav-links">
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger" style="color: #38A3A5">&#9776;</label>
+                <div class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li class="services">
+                        <a href="#">Cursos</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Cursos Técnicos</a></li>
+                            <li><a href="#">Cursos Pós Tecnicos</a></li>
+                            <li><a href="#">Cursos Profissionalizantes</a></li>
+                            <li><a href="#">Cusos EAD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://online.anyflip.com/nizc/lfmx/mobile/index.html">Revista</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </div>
+            </ul>
+            <div class="login">
+                <div class="button-container">
+                    <a href="#" target="_blank">
+                        <button class="acd">Portal Acadêmico</button>
+                    </a>
+                    <a href="#" target="_blank">
+                        <button class="adm">Portal Administrativo</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+
+    </section>
+
+    <main>
+        <div class="item">
+            <div class="card">
+                <div class="thumb">
+                    <img src="./img/tec.png" alt="img">
+                </div>
+                <div class="details">
+                    <h5>Técnicos</h5>
+                    <a class="read-more" href="#"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumb">
+                    <img src="./img/poss.png" alt="img">
+                </div>
+                <div class="details">
+                    <h5>Pós Técnicos</h5>
+                    <a class="read-more" href="#"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumb">
+                    <img src="./img/aaa.png" alt="img">
+                </div>
+                <div class="details">
+                    <h5>Profissionalizantes</h5>
+                    <a class="read-more" href="#"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumb">
+                    <img src="./img/eadd.png" alt="img">
+                </div>
+                <div class="details">
+                    <h5>EAD</h5>
+                    <a class="read-more" href="#"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <div class="texto" style="font-size: 1.5rem">Cursos</div>
+            <div class="card-cursos">
+                <div class="cartao">
+                    <div class="relativo">
+                        <img src="./img/adm.png" alt="img">
+                        <span class="tipo">Técinco</span>
+                    </div>
+                    <div class="detalhes-curso">
+                        <div>
+                        <a class="nome-curso" href="#">Administração</a>
+                        <h6>Duração: 10 meses</h6>
+                        <a class="read-more-text" href="#">Saiba Mais <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="cartao">
+                    <div class="relativo">
+                        <img src="./img/estetica.png" alt="img">
+                        <span class="tipo">Técnico</span>
+                    </div>
+                    <div class="detalhes-curso">
+                        <a class="nome-curso" href="#">Estética</a>
+                        <h6>Duração: 18 meses</h6>
+                        <a class="read-more-text" href="#">Saiba Mais <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="cartao">
+                    <div class="relativo">
+                        <img src="./img/enfermagem.png" alt="img">
+                        <span class="tipo">Técnico</span>
+                    </div>
+                    <div class="detalhes-curso">
+                        <a class="nome-curso" href="#">Enfermagem</a>
+                        <h6>Duração: 24 meses</h6>
+                        <a class="read-more-text" href="#">Saiba Mais <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <section class="events">
+                <h1 class="fotos-eventos"><span class="line">Fotos / Eventos</span></h1>
+                <div class="section-content">
+                        <div class="event-item">
+                            <div class="container-date">
+                                <p class="date-label">
+                                    <span class="month">SET</span>
+                                    <span class="date-number">28</span>
+                                </p>
+                            </div>
+                            <div class="detalhes">
+                                <h2 class="title_noticias"><a href="evento.asp?evento=46">Curso de Capacitação Profissional em Primeiros Socorros - Suporte Básicos e Avançado de Vida</a></h2>
+                                <p class="location"><i class="fa fa-map-marker"></i> EPTEC - Centro Educacional</p>
+                            </div><!--//details-->
+                        </div><!--event-item-->
+                        
+                        <div class="event-item">
+                            <div class="container-date">
+                                <p class="date-label">
+                                    <span class="month">SET</span>
+                                    <span class="date-number">14</span>
+                                </p>
+                            </div>
+                            <div class="detalhes">
+                                <h2 class="title_noticias"><a href="evento.asp?evento=45">Primeiro Circuito Saude EPTEC!</a></h2>
+                                <p class="location"><i class="fa fa-map-marker"></i> Praça central</p>
+                            </div><!--//details-->
+                        </div><!--event-item-->
+                        
+                        <div class="event-item">
+                            <div class="container-date">
+                                <p class="date-label">
+                                    <span class="month">AGO</span>
+                                    <span class="date-number">10</span>
+                                </p>
+                            </div>
+                            <div class="detalhes">
+                                <h2 class="title_noticias"><a href="evento.asp?evento=41">Alunos do Curso Profissionalizante de Cuidador de Idosos visita Instituição UNIQUE</a></h2>
+                                <p class="location"><i class="fa fa-map-marker"></i> UNIQUE</p>
+                            </div><!--//details-->
+                        </div><!--event-item-->
+                        
+                    <a class="todos-eventos" href="eventos.asp">Todos Eventos<i class="fa fa-chevron-right"></i></a>
+                </div>
+            </section>
+        </div>
+        <div class="slider">
+
+            <input type="radio" name="toggle" id="btn-1" checked>
+            <input type="radio" name="toggle" id="btn-2">
+            <input type="radio" name="toggle" id="btn-3">
+            <input type="radio" name="toggle" id="btn-4">
+            <input type="radio" name="toggle" id="btn-5">
+            <input type="radio" name="toggle" id="btn-6">
+            <input type="radio" name="toggle" id="btn-7">
+            <input type="radio" name="toggle" id="btn-8">
+            <input type="radio" name="toggle" id="btn-9">
+
+            <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+                <label for="btn-3"></label>
+                <label for="btn-4"></label>
+                <label for="btn-5"></label>
+                <label for="btn-6"></label>
+                <label for="btn-7"></label>
+                <label for="btn-8"></label>
+                <label for="btn-9"></label>
+            </div>
+
+            <ul class="slides">
+
+                <li class="slide">
+                  <div class="slide-content">
+                    <h2 class="slide-title">CURSO DE RESGATE EM ÁREAS DE COBERTURA NATURAL - MATAS E CACHOEIRAS</h2>
+                    <p class="slide-text">Venha adquirir experiência e conhecimento em resgates repletos de adrenalina com todo o suporte teórico e prático.</p>
+                    <a href="https://www.facebook.com/notes/eptec-centro-educacional/curso-de-resgate-em-%C3%A1reas-de-cobertura-natural-matas-e-cachoeiras/2263345350597119/" target="_blank" class="slide-link">Leia Mais</a>
+                  </div>
+                  <p class="slide-image">
+                    <img src="./img/news1.png" alt="stuff" width="220" height="220">
+                  </p>
+                </li>
+
+                <li class="slide">
+                  <div class="slide-content">
+                    <h2 class="slide-title">1° Jornada de Estética Eptec</h2>
+                    <p class="slide-text">Venha ampliar seus conhecimentos na área de estética junto com profissionais experientes e qualificados discutindo sobre atualidades pertinentes a área. Faça já sua inscrição! Mais informações: (16) 3017-2502</p>
+                    <a href="#" class="slide-link">Leia Mais</a>
+                  </div>
+                  <p class="slide-image">
+                    <img src="./img/news2.png" alt="stuff" width="220" height="220">
+                  </p>
+                </li>
+
+                <li class="slide">
+                  <div class="slide-content">
+                    <h2 class="slide-title">Alunos de Enfermagem atendem e orientam a população.</h2>
+                    <p class="slide-text">No dia 16 de Março, em parceria com o supermercado Fernando no Residencial Zanetti, estivemos presente novamente com os alunos da enfermagem aferindo a pressão arterial e dando orientações sobre dengue e DSTs.</p>
+                    <a href="https://www.facebook.com/eptec.escolatecnica/photos/pcb.2215935685338086/2215935582004763/?type=3&theater" target="_blank" class="slide-link">Leia Mais</a>
+                  </div>
+                  <p class="slide-image">
+                    <img src="./img/news3.jpg" alt="stuff" width="280" height="220">
+                  </p>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">Curso: Politrauma em Resgate Vertical e Aquático</h2>
+                      <p class="slide-text">A  EPTEC preparou capacitação de socorristas para agir de maneira rápida, segura e acima de tudo com muita técnica e profissionalismo, principalmente em locais onde ocorre espo</p>
+                      <a href="https://www.facebook.com/eptec.escolatecnica/photos/pcb.2204508083147513/2204506719814316/?type=3&theater" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news4.jpg" alt="stuff" width="280" height="220">
+                    </p>
+                  </li>
+
+                  <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">Atendimento à população com o curso de Enfermagem</h2>
+                      <p class="slide-text">Bom dia !!! EPTEC em ação !!!
+                        Galeria Shopping Leporace. Av. Abrão Brickiman
+                        Hoje com a equipe de enfermagem realizando atendimento à população !!</p>
+                      <a href="https://www.facebook.com/eptec.escolatecnica/photos/pcb.2176504575947864/2176503879281267/?type=3&__tn__=HH-R&eid=ARC3TvJ237xjE4gW2ZVGoMoHMTMA1khvYZBQxPDjfhX5uEXbHEqxscbHek2J3lFiO3JhMPVX51W9ylrW&__xts__%5B0%5D=68.ARAW8D2w7rsqKPbw-0f1asPVm19v26mI8MjOo" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news5.jpg" alt="stuff" width="280" height="220">
+                    </p>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">EPTEC oferece cursos da capacitação profissional gratuitos nas férias</h2>
+                      <p class="slide-text">Em mais uma ação para estimular o sucesso profissional das pessoas na sociedade francana, a EPTEC Centro Educacional está oferecendo 6 cursos de férias gratuitos em janeiro, com direito a certificado de 20 horas.</p>
+                      <a href="assets/eptec_cursos_gratuitos.pdf" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news6.jpg" alt="stuff" width="220" height="220">
+                    </p>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">Curso técnico é opção para entrar no mercado de trabalho mais rápido</h2>
+                      <p class="slide-text">A oferta desse tipo de curso de 2014 para 2015 subiu quase 40%. Especialista esclarece dúvidas sobre o tema.</p>
+                      <a href="http://g1.globo.com/jornal-hoje/noticia/2016/06/curso-tecnico-e-opcao-para-entrar-no-mercado-de-trabalho-mais-rapido.html" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news7.png" alt="stuff" width="220" height="220">
+                    </p>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">Qualificação é essencial para conseguir uma vaga de trabalho</h2>
+                      <p class="slide-text">Profissional está demorando mais tempo para conseguir trabalho. Além da crise, falta candidatos com o perfil exigido.</p>
+                      <a href="http://g1.globo.com/jornal-hoje/noticia/2015/07/qualificacao-e-essencial-para-conseguir-uma-vaga-de-trabalho.html" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news8.png" alt="stuff" width="220" height="220">
+                    </p>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-content">
+                      <h2 class="slide-title">Curso técnico aumenta chances de conseguir vaga de emprego</h2>
+                      <p class="slide-text">Estudo mostra que profissionais que têm ensino técnico são menos demitidos. Setenta por cento deles conseguem emprego logo que se formam.</p>
+                      <a href="http://g1.globo.com/jornal-hoje/noticia/2015/08/curso-tecnico-aumenta-chances-de-conseguir-vaga-de-emprego.html" target="_blank" class="slide-link">Leia Mais</a>
+                    </div>
+                    <p class="slide-image">
+                      <img src="./img/news9.png" alt="stuff" width="220" height="220">
+                    </p>
+                </li>
+
+              </ul>
+
+        </div>
+        <div class="contato">
+            <div class="formulario">
+                <form class="fale-conosco">
+                    <div class="section-title">
+                        <h2 class="title-form">Fale Conosco</h2>
+                        <p>Caso tenha alguma dúvida, comentário ou sugestão, entre em contato conosco pelo formulário abaixo. Sua opinião é muito importante para nós.</p>
+                    </div>
+                    <div class="row">
+                        <div class="item-form">
+                            <input type="text" placeholder="Nome">
+                        </div>
+                        <div class="item-form">
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                        <div class="item-form">
+                            <input type="text" placeholder="Telefone">
+                        </div>
+                        <div class="item-form">
+                            <textarea class="msg" placeholder="Mensagem"></textarea>
+                        </div>
+                        <div class="btn-enviar">
+                            <a class="botao-enviar" href="#">Enviar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Feptec.centroeducacional%2F%3Flocale%3Dpt_BR&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="800" height="370" style="border:none;overflow:hidden; padding: 40px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        <section class="awards">
+            <div class="carousel">
+                <div class="item active">
+                    <ul class="logos">
+                                
+                        <li class="col-md-2">
+                            <a href="http://www.coren-sp.gov.br/atendimento-hora-marcada" target="_blank"><img class="img-responsive" src="./img/coren.png" alt=""></a> 
+                        </li>
+                                    
+                        <li class="col-md-2">
+                            <a href="https://concluintes.educacao.sp.gov.br/publica/consultapublica/Search" target="_blank"><img class="img-responsive" src="./img/gov.png" alt=""></a>
+                        </li>
+                                    
+                        <li class="col-md-2">
+                            <a href="http://www.crtrsp.org.br/site/" target="_blank"><img class="img-responsive" src="./img/crtr.png" alt=""></a>
+                        </li>
+                                    
+                        <li class="col-md-2">
+                            <a href="http://www.creasp.org.br/" target="_blank"><img class="img-responsive" src="./img/crea.png" alt=""></a>
+                        </li>
+                                    
+                        <li class="col-md-2">
+                            <a href="http://www.crq4.org.br/endere_ribeiraopreto" target="_blank"><img class="img-responsive" src="./img/cro.png" alt=""></a>
+                        </li>
+                                    
+                        <li class="col-md-2">
+                            <a href="http://sistec.mec.gov.br/VALIDADENACIONAL" target="_blank"><img class="img-responsive" src="./img/sistec.png" alt=""></a>
+                        </li>
+                                    
+                    </ul><!--//slides-->
+                </div><!--//item-->
+                        
+            </div><!--//carousel-inner-->
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-sobre">
+                    <h3>Sobre</h3>
+                    <ul>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/eptec/" class="footer-link" id="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/eptec.centroeducacional/?locale=pt_BR" class="footer-link" id="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer-link" id="whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-list">
+                    <h3>Fale Conosco</h3>
+                        <p class="info-rodape">
+                            <i class="fa fa-map-marker pull-left"></i>
+                            <span class="adr-group pull-left">
+                                <span class="street-address">EPTEC Franca</span><br>
+                                <span class="region">R. Prudente de Morais, 647</span><br>								
+                                <span class="country-name">Cidade Nova - Franca/SP</span>
+                            </span>
+                        </p>
+                        <p class="tel"><i class="fa fa-phone"></i>+55 (16) 99451-8217 </p>
+                        <p class="tel"><i class="fa fa-phone"></i>+55 (16) 99230-6161 </p>
+                        <p class="tel"><i class="fa fa-phone"></i>+55 (16) 3406-4819</p>
+                        <p class="email"><i class="fa fa-envelope"></i><a href="mailto:atendimento@eptec.com.br">atendimento@eptec.com.br</a></p>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber o nosso boletim informativo.</p>
+                    <form class="subscribe-form" action="" method="post" role="form" id="form_newsletter">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" id="email_news" name="email_news"/>
+                        </div>
+                        <input class="button" type="submit" value="Assinar">
+                    </form>
+                </div>
+                
+            </div><!--//footer-content-->
+            <div class="bottom-bar">
+                <div class="container">
+                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Copyright @ 2017 EPTEC | Desenvolvido por <a href="http://alsite.com.br" target="_blank">Alsite</a></small>
+                </div><!--//container-->
+            </div>
+        </footer><!--//footer-->
+    </main>
+    <script src="mobile-navbar.js"></script>
+</body>
+</html>
